@@ -17,7 +17,7 @@ function App() {
   const runSimulation = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('https://nullwager.onrender.com', {
+      const response = await axios.get('https://nullwager.onrender.com/simulate', {
         params: { start_cash: startCash, bet_size: betSize, strategy: strategy }
       });
       setData(response.data.history);
